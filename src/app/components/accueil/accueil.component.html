@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Accueil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding middlePage"> <div id="container">
+    <div class="logoTitre">
+      <img src="../../assets/shapes.svg" alt="">
+      <strong class="titreConf">Conférence</strong>
+    </div>
+    <div class="date">
+      <p>du 20/01/2024</p>
+      <p >au 25/01/2024</p>
+    </div>
+    <ion-button><a href="" [routerLink]="'/sessionsList'">Voir les sessions</a></ion-button>
+    <ion-button><a href="" [routerLink]="'/presentateursList'">Voir les presentateurs</a></ion-button>
+
+  </div></ion-content>
+</div>
+
+<app-footer></app-footer> 

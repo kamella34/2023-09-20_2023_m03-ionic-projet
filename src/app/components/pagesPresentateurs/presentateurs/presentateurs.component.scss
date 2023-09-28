@@ -1,0 +1,42 @@
+.shortBio{
+    margin:1rem
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#10dc60;
+}
+
+.company{
+    text-align: center;
+    justify-content: center;
+}
+.bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description, .shortBio{
+  align-self: center;
+}
+
+.badge{
+    background-color:#10dc60;
+}
+
+.divButton{
+    text-align: right;
+    background-color: #10dc60;
+}
+.button{
+    margin: 1rem;
+    color: #10dc60;
+}
+
+body{
+    display: flex;
+    place-content: center;
+}

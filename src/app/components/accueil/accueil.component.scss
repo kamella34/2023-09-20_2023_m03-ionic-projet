@@ -1,0 +1,44 @@
+img {
+    height: 15rem;
+}
+
+.logoTitre {
+    display: flex;
+    flex-direction: column;
+}
+
+.titreConf {
+    margin-top: 1rem;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.middlePage {
+    text-align: center;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+}
+
+p{
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}

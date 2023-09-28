@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Liste des Presentateurs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-list>
+    <!-- <ion-item *ngFor="let presentateur of presentateurs | keyvalue"> -->
+    <ion-item *ngFor="let presentateur of presentateurs">
+      <ion-avatar aria-hidden="true" slot="start">
+        <ion-img [src]="'https://devfest2018.gdgnantes.com'+ presentateur.photoUrl"></ion-img>
+      </ion-avatar>
+
+      <ion-label><a [routerLink]="['/presentateur', presentateur.id]">{{presentateur.name}}</a></ion-label>
+      
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+  <app-footer></app-footer>
