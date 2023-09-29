@@ -5,14 +5,13 @@
       <ion-button [routerLink]="'/sessionsList'" class="button" color="dark">X</ion-button>
     </div>
     <ion-card-header>
-      <ion-card-subtitle>{{session.type}}</ion-card-subtitle>
-      <ion-card-title>{{session.title}}</ion-card-title>
-      <ion-text>{{session.tags}}</ion-text>
-      <ion-text *ngIf="session.speakers">Presentateur: {{session.speakers}}</ion-text>
+      <ion-card-subtitle class="header">{{session.type}}</ion-card-subtitle>
+      <ion-card-title class="header">{{session.title}}</ion-card-title>
+      <ion-text class="header">{{session.tags}}</ion-text>
+      <ion-text class="header speaker" *ngIf="nameSpeakerSession">Presenté par : {{nameSpeakerSession}}</ion-text>
     </ion-card-header>
 
-    <ion-card-content>
-     
+    <ion-card-content class="description" >
       <ion-text *ngIf="session.description">{{session.description}}</ion-text>
     </ion-card-content>
   </ion-card>

@@ -14,6 +14,7 @@ export class PresentateursComponent implements OnInit {
   sessions: Session[] = [];
   presentateur!: Presentateur;
   id!: number;
+  nameSpeakerSession: string = "";
 
   constructor(private _presentateursService: PresentateursService, private _router: Router,
     private _route: ActivatedRoute) { }

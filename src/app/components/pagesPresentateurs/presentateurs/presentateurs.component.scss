@@ -1,5 +1,10 @@
-.shortBio{
-    margin:1rem
+.divBio{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+}
+.bio{
+    margin: 2rem;
 }
 
 .card{
