@@ -10,6 +10,11 @@ import { NotesComponent } from './components/notes/notes.component';
 
 const routes: Routes = [
   {
+path: '',
+redirectTo:'accueil', pathMatch: "full",
+
+  },
+  {
     path: 'accueil', component: AccueilComponent,
   },
 
