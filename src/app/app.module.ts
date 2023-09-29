@@ -16,11 +16,14 @@ import { SessionsComponent } from './components/pagesSessions/sessions/sessions.
 import { ListePresentateursComponent } from './components/pagesPresentateurs/liste-presentateurs/liste-presentateurs.component';
 import { ListeSessionsComponent } from './components/pagesSessions/liste-sessions/liste-sessions.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './components/notes/notes.component';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent, AccueilComponent,FooterComponent, HeaderComponent,PresentateursComponent, SessionsComponent, ListeSessionsComponent,ListePresentateursComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,CommonModule,HttpClientModule,RouterModule],
+  declarations: [AppComponent, AccueilComponent,FooterComponent, HeaderComponent,PresentateursComponent, SessionsComponent, ListeSessionsComponent,ListePresentateursComponent,NotesComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,CommonModule,HttpClientModule,RouterModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

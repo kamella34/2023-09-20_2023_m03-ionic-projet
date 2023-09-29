@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PresentateursService } from 'src/app/components/shared/services/presentateurs.service';
 import { Presentateur } from '../../shared/models/presentateursModel';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Session } from '../../shared/models/sessionsModel';
 
 @Component({
   selector: 'app-presentateurs',
@@ -9,8 +10,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./presentateurs.component.scss'],
 })
 export class PresentateursComponent implements OnInit {
-
-
+  sessions: Session[] = [];
+  // session!: Session;
   presentateur!: Presentateur;
 
   id!: number;
@@ -22,17 +23,17 @@ export class PresentateursComponent implements OnInit {
     this.route.params.subscribe(queryId => {
       this.id = queryId['id'];
 
-  
 
-    this.presentateursService.findAll().subscribe(data => {
-      if (data.hasOwnProperty(this.id)) {
-        this.presentateur = data[this.id];
-      } else {
-        console.error('error not found')
-      }
-    })
 
-  });
+      this.presentateursService.findAll().subscribe(data => {
+        if (data.hasOwnProperty(this.id)) {
+          this.presentateur = data[this.id];
+        } else {
+          console.error('error not found')
+        }
+      })
+
+    });
 
   }
 

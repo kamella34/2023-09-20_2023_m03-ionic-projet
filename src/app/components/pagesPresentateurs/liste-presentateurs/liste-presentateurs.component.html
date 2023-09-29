@@ -14,7 +14,7 @@
     <!-- <ion-item *ngFor="let presentateur of presentateurs | keyvalue"> -->
     <ion-item *ngFor="let presentateur of presentateurs">
       <ion-avatar aria-hidden="true" slot="start">
-        <ion-img [src]="'https://devfest2018.gdgnantes.com'+ presentateur.photoUrl"></ion-img>
+        <ion-img [src]="'https://devfest2018.gdgnantes.com/'+ presentateur.photoUrl"></ion-img>
       </ion-avatar>
 
       <ion-label><a [routerLink]="['/presentateur', presentateur.id]">{{presentateur.name}}</a></ion-label>

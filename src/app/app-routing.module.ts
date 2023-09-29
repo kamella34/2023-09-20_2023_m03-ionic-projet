@@ -5,6 +5,7 @@ import { ListeSessionsComponent } from './components/pagesSessions/liste-session
 import { ListePresentateursComponent } from './components/pagesPresentateurs/liste-presentateurs/liste-presentateurs.component';
 import { SessionsComponent } from './components/pagesSessions/sessions/sessions.component';
 import { PresentateursComponent } from './components/pagesPresentateurs/presentateurs/presentateurs.component';
+import { NotesComponent } from './components/notes/notes.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
 
   {path: 'presentateursList', component: ListePresentateursComponent}, 
   {path: 'presentateur/:id', component: PresentateursComponent },
+  {path: 'notes', component: NotesComponent },
    
 
 ]

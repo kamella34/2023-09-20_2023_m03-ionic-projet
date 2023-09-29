@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /2023-09-20_2023_m03-ionic-projet/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
@@ -21,9 +21,12 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@capacitor/android": "^5.4.1",
     "@capacitor/app": "5.0.6",
+    "@capacitor/clipboard": "^5.0.6",
     "@capacitor/core": "^5.4.1",
     "@capacitor/haptics": "5.0.6",
+    "@capacitor/ios": "^5.4.1",
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",

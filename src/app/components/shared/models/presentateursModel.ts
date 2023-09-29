@@ -4,4 +4,5 @@ export interface Presentateur{
     company:string;
     photoUrl:string;
     shortBio:string;
+    bio:string;
 }

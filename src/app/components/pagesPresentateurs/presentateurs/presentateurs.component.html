@@ -4,16 +4,33 @@
   <ion-button [routerLink]="'/presentateursList'" class="button" color="dark">X</ion-button>
 </div>
 <div class="card">
-  <img  [src]="'https://devfest2018.gdgnantes.com'+ presentateur.photoUrl" />
+  <img  [src]="'https://devfest2018.gdgnantes.com/'+ presentateur.photoUrl" />
   <div class="bio">
     <ion-card-header class="description">
-      <ion-card-title class="description"   >{{presentateur.name}}</ion-card-title>
+      <ion-card-title class="description">{{presentateur.name}}</ion-card-title>
       <ion-card-subtitle class="company" >{{presentateur.company}}</ion-card-subtitle>
+      
     </ion-card-header>
 
     <ion-card-content class="shortBio">
-      <ion-text><i>{{presentateur.shortBio}}</i></ion-text>
+      <ion-text><i>{{presentateur.bio}}</i></ion-text>
     </ion-card-content>
+      
+    <!-- <ion-list>
+      <ion-label class="ion-text-center"><h1>Les Présentations</h1></ion-label>
+      <ion-item *ngFor="let session of sessions" [routerLink]="['/session', session.id]">
+      <ion-item *ngFor="let session of sessions">
+        <ion-label>
+          <ion-text>{{ session.speakers}}</ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-label>
+      <ion-text>Texte</ion-text>
+    </ion-label> -->
+
   </div>
 </div>
 </ion-card>
