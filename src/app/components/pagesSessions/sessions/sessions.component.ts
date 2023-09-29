@@ -4,7 +4,7 @@ import { SessionsService } from '../../shared/services/sessions.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PresentateursService } from '../../shared/services/presentateurs.service';
 import { Presentateur } from '../../shared/models/presentateursModel';
-import { mergeMap } from 'rxjs/operators';
+
 
 
 
@@ -18,7 +18,7 @@ export class SessionsComponent implements OnInit {
   session!: Session;
   id!: number;
   sessions: Session[] = [];
-  presentateurs: Presentateur[] = [];
+  // presentateurs: Presentateur[] = [];
 
   presentateur!: Presentateur;
 
@@ -43,22 +43,13 @@ export class SessionsComponent implements OnInit {
             this.presentateur = data[this.id];
             console.log(Object.values(data))
 
-            
-
-            data.forEach(id => {
-              this._presentateurService.findPresentateurById(101).subscribe(rep => {
-                console.log(rep);
-              });
-            });
-
 
           }
-        });
+        })
 
-       
-      
-       
-    
+
+
+
       });
     })
   }
