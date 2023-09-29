@@ -10,25 +10,17 @@ import { NotesComponent } from './components/notes/notes.component';
 
 const routes: Routes = [
   {
-path: '',
-redirectTo:'accueil', pathMatch: "full",
-
+    path: '',
+    redirectTo: 'accueil',
+    pathMatch: "full",
   },
-  {
-    path: 'accueil', component: AccueilComponent,
-  },
+  {path: 'accueil', component: AccueilComponent,},
+  { path: 'presentateursList', component: ListePresentateursComponent },
+  { path: 'presentateur/:id', component: PresentateursComponent },
+  { path: 'sessionsList', component: ListeSessionsComponent },
+  { path: 'session/:id', component: SessionsComponent },
+  { path: 'notes', component: NotesComponent },
 
-  {
-    path: 'sessionsList', component: ListeSessionsComponent,
-    children: [
-      { path: 'session', component: SessionsComponent },
-    ]
-  },
-
-  {path: 'presentateursList', component: ListePresentateursComponent}, 
-  {path: 'presentateur/:id', component: PresentateursComponent },
-  {path: 'notes', component: NotesComponent },
-   
 
 ]
 @NgModule({

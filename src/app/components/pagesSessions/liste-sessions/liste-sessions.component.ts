@@ -14,7 +14,8 @@ export class ListeSessionsComponent implements OnInit {
   constructor(private sessionsService: SessionsService) { }
 
   ngOnInit() {
-    this.sessionsService.findAll().subscribe((data) => {
+    
+    this.sessionsService.findAllSession().subscribe((data) => {
       console.log(data);
       this.sessions = Object.values(data);
     })

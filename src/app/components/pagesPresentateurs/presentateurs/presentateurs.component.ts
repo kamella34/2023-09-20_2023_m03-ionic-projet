@@ -10,26 +10,23 @@ import { Session } from '../../shared/models/sessionsModel';
   styleUrls: ['./presentateurs.component.scss'],
 })
 export class PresentateursComponent implements OnInit {
+    // session!: Session;
   sessions: Session[] = [];
-  // session!: Session;
   presentateur!: Presentateur;
-
   id!: number;
-  constructor(private presentateursService: PresentateursService, private router: Router,
-    private route: ActivatedRoute) { }
+
+  constructor(private _presentateursService: PresentateursService, private _router: Router,
+    private _route: ActivatedRoute) { }
 
   ngOnInit() {
 
-    this.route.params.subscribe(queryId => {
+    this._route.params.subscribe(queryId => {
       this.id = queryId['id'];
-
-
-
-      this.presentateursService.findAll().subscribe(data => {
+      this._presentateursService.findAllPresentateur().subscribe(data => {
         if (data.hasOwnProperty(this.id)) {
           this.presentateur = data[this.id];
         } else {
-          console.error('error not found')
+          console.error('not found')
         }
       })
 

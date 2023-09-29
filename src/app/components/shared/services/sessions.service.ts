@@ -15,7 +15,7 @@ export class SessionsService {
 
   constructor(private _http: HttpClient) { }
 
- public findAll(): Observable<Session[]> {
+ public findAllSession(): Observable<Session[]> {
     return this._http.get<Session[]>(this._baseUrlSession)
   }
 

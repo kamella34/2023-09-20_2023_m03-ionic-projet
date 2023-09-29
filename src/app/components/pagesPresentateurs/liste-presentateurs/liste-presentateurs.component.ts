@@ -18,7 +18,7 @@ export class ListePresentateursComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.presentateursService.findAll().subscribe((data) => {
+    this.presentateursService.findAllPresentateur().subscribe((data) => {
       console.log(data)
       this.presentateurs = Object.values(data);
    })

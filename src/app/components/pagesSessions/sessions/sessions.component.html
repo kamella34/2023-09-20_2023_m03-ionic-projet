@@ -1,3 +1,19 @@
-<p>
-  sessions works!
-</p>
+<ion-card *ngIf="session">
+
+  <ion-card>
+    <div class="divButton">
+      <ion-button [routerLink]="'/sessionsList'" class="button" color="dark">X</ion-button>
+    </div>
+    <ion-card-header>
+      <ion-card-subtitle>{{session.type}}</ion-card-subtitle>
+      <ion-card-title>{{session.title}}</ion-card-title>
+      <ion-text>{{session.tags[0]}}</ion-text>
+      <ion-text *ngIf="session.speakers">Presentateur: {{session.speakers}}</ion-text>
+    </ion-card-header>
+
+    <ion-card-content>
+     
+      <ion-text *ngIf="session.description">{{session.description}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-card>
