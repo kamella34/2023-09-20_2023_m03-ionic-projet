@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable,map } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Presentateur } from "../models/presentateursModel";
 
 @Injectable({
@@ -15,15 +15,8 @@ export class PresentateursService {
 
   constructor(private _http: HttpClient) { }
 
- public findAllPresentateur(): Observable<Presentateur[]> {
+  public findAllPresentateur(): Observable<Presentateur[]> {
     return this._http.get<Presentateur[]>(this._baseUrlPresentateur)
   }
-
-  public findPresentateurById(id: number): Observable<Presentateur[]> {
-    return this._http.get<Presentateur>(`${this._baseUrlPresentateur}/${id}`).pipe(map(data => Object.values(data)))
-  }
-  // public findPresentateurById(id: number): Observable<Presentateur> {
-  //   return this._http.get<Presentateur>(`${this._baseUrlPresentateur}/${id}`);
-  // }
 
 }

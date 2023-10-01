@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { Session } from "../models/sessionsModel";
 
 @Injectable({
@@ -15,7 +15,7 @@ export class SessionsService {
 
   constructor(private _http: HttpClient) { }
 
- public findAllSession(): Observable<Session[]> {
+  public findAllSession(): Observable<Session[]> {
     return this._http.get<Session[]>(this._baseUrlSession)
   }
 

@@ -3,7 +3,7 @@ import { Session } from '../../shared/models/sessionsModel';
 import { SessionsService } from '../../shared/services/sessions.service';
 import { ActivatedRoute } from '@angular/router';
 import { PresentateursService } from '../../shared/services/presentateurs.service';
-
+import { Presentateur } from '../../shared/models/presentateursModel';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class SessionsComponent implements OnInit {
   session!: Session;
   id!: number;
   idSpeakerSession: Number[] = [];
-  sessionSpeakerNames: string[] = [];
+  sessionSpeakerNames: string[] = [] ;
 
   constructor(private _sessionsService: SessionsService, private _presentateurService: PresentateursService,
     private _route: ActivatedRoute,) { }
