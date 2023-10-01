@@ -5,6 +5,11 @@
 }
 .bio{
     margin: 2rem;
+    color: rgb(28, 27, 27);
+}
+.name{
+    color: #3880ff;
+    font-weight: bold;
 }
 
 .card{
@@ -12,16 +17,27 @@
     flex-direction: row;
     justify-content: center;
     background-color:#10dc60;
+    height: 100vh;
 }
 
 .company{
     text-align: center;
     justify-content: center;
+    color:#7044ff;
+    font-weight: bold;
 }
 .bio{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color:white;
+    font-size: large;
+    font-weight: bold;
+}
+
+img{
+    height: 30rem;
+    margin: 2rem;
 }
 
 .description, .shortBio{
@@ -44,4 +60,25 @@
 body{
     display: flex;
     place-content: center;
+  
+}
+
+.presentations{
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+
+}
+
+.labelPresentation{
+font-size: medium;
+color: #3880ff;
+
+}
+
+.session{
+   color: #3880ff;
+
 }
