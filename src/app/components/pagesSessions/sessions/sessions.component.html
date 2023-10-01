@@ -6,12 +6,18 @@
     </div>
     <div class="card">
       <ion-card-header>
-        <ion-card-subtitle class="header">{{session.type}}</ion-card-subtitle>
-        <ion-card-title class="header">{{session.title}}</ion-card-title>
-        <ion-text class="header">{{session.tags}}</ion-text>
-        <ion-text class="header speaker" *ngIf="nameSpeakerSession">Presenté par : {{nameSpeakerSession}}</ion-text>
+        <ion-card-subtitle class="label">{{session.type}}</ion-card-subtitle>
+        <ion-card-title class="label">{{session.title}}</ion-card-title>
+        
+        <div class="presentateur">
+          <ion-text class="label">Presenté par :</ion-text>
+          <ng-container *ngFor="let speakerName of sessionSpeakerNames; let last = last">
+            <ion-text class="speakerName"> {{ speakerName }}{{ !last ? ', ' : '' }}</ion-text>
+          </ng-container>
+        </div>
+        <ion-text class="label">{{session.tags}}</ion-text>
       </ion-card-header>
-
+      
       <ion-card-content class="description">
         <ion-text *ngIf="session.description">{{session.description}}</ion-text>
       </ion-card-content>
