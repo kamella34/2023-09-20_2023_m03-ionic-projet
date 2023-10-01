@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PresentateursService } from 'src/app/components/shared/services/presentateurs.service';
 import { Presentateur } from '../../shared/models/presentateursModel';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { SessionsService } from '../../shared/services/sessions.service';
 
 
@@ -11,16 +11,15 @@ import { SessionsService } from '../../shared/services/sessions.service';
   styleUrls: ['./presentateurs.component.scss'],
 })
 export class PresentateursComponent implements OnInit {
- 
+
   presentateur!: Presentateur;
   id!: number;
-  speakerName!: string;
   speakerId!: number;
   sessionSpeakers: number[] = [];
   sessionTitle!: string;
   sessionPresentateur!: string;
 
-  constructor(private _presentateursService: PresentateursService, private _router: Router,
+  constructor(private _presentateursService: PresentateursService,
     private _route: ActivatedRoute, private _sessionsService: SessionsService) { }
 
   ngOnInit() {
@@ -30,10 +29,7 @@ export class PresentateursComponent implements OnInit {
       this._presentateursService.findAllPresentateur().subscribe(data => {
         if (data.hasOwnProperty(this.id)) {
           this.presentateur = data[this.id];
-          this.speakerName = data[this.id].name;
           this.speakerId = data[this.id].id;
-          console.log("SPEAKER iD " + this.speakerId);
-          console.log("SPEAKER NAME " + this.speakerName);
         }
 
         this._sessionsService.findAllSession().subscribe(data => {
