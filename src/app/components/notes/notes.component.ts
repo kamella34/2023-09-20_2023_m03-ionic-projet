@@ -31,7 +31,7 @@ export class NotesComponent implements OnInit {
   }
 
   deleteNote(note: string) {
-    this.tabNote = this.tabNote.filter(data => data !== note);
+    this.tabNote = this.tabNote.filter(data  => data!== note);
     localStorage.setItem('storedNotes', JSON.stringify(this.tabNote));
   }
 }

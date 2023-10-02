@@ -24,8 +24,8 @@ export class PresentateursComponent implements OnInit {
 
   ngOnInit() {
 
-    this._route.params.subscribe(queryId => {
-      this.id = queryId['id'];
+    this._route.params.subscribe(dataUrl => {
+      this.id = dataUrl['id'];
       this._presentateursService.findAllPresentateur().subscribe(data => {
         if (data.hasOwnProperty(this.id)) {
           this.presentateur = data[this.id];
